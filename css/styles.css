@@ -96,7 +96,7 @@ body{
     }    
 }
 
-    .content{
+    #about{
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -111,7 +111,7 @@ body{
         margin: 10px;
     }
 
-    .contenttwo{
+    #contenttwo{
        display: flex;
        flex-direction: row;
        justify-content: center;
@@ -139,11 +139,11 @@ body{
         box-shadow: 7px 13px 37px #0000;
     }
 
-    .numbers{
+    #numbers{
         width: 100%;
         background: #EAEAEA;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 12px;
+        border-radius: 4px;
         margin-bottom: 16px;
         border: 2px solid #32065E;
         font-size: 18px;
@@ -165,6 +165,5 @@ body{
         color: #32065E;
         border: none;
         padding: 12px;
-        margin: 16px 0;
         font-size: 16px;
     }
