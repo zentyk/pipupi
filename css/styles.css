@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
@@ -9,9 +8,11 @@
 body{
    background: linear-gradient(#41097A, #050222);
    background-repeat: no-repeat;
-   height: 100%;
    background-attachment: fixed;
    font-family: Arial, Helvetica, sans-serif;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
 }
 
 .container{
@@ -120,10 +121,22 @@ body{
     .img-1{
         margin-right: 20px;
         margin: 40px;    
+        cursor: pointer;
+    }
+
+    .img-1:hover{
+      transform: scale(1.1);
+      transition: 2s;
     }
 
     .img-2{
-        margin-left: 20px;       
+        margin-left: 20px; 
+        cursor: pointer;      
+    }
+
+    .img-2:hover{
+      transform: scale(1.1);
+      transition: 2s;
     }
 
     .form{
@@ -133,7 +146,7 @@ body{
         align-items: center;
         width: 200px;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 20px;
         border-radius: 4px;
         color: white;
         box-shadow: 7px 13px 37px #0000;
@@ -142,7 +155,7 @@ body{
     #numbers{
         width: 100%;
         background: #EAEAEA;
-        padding: 12px;
+        padding: 10px;
         border-radius: 4px;
         margin-bottom: 16px;
         border: 2px solid #32065E;
@@ -159,11 +172,23 @@ body{
         text-decoration: underline;
     }
 
-    .form .btns{
+    .form button{
         width: 100%;
         background: #D9D9D9;
         color: #32065E;
         border: none;
-        padding: 12px;
+        padding: 10px;
+        margin: 16px 0;
         font-size: 16px;
+        cursor: pointer;
     }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 50px;
+        background-color: #050222;
+       
+    }
+
+    
