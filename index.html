@@ -35,15 +35,15 @@
 
       <h2>¿Que aplicacion deseas utilizar?</h2>
     <div id="contenttwo">
-      <img class="img-1" src="img/whatsapp.png" alt="">
-      <img class="img-2" src="img/facebook.png" alt="">
+      <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')">
+      <img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')">
     </div>
 
     <section class="form">
-      <input id="numbers" type="text" name="phone-number"  placeholder="Ingresa tu numero">
-      <button onclick="generateLink();">Generar link</button>
-      <button onclick="shareLink();">Compartir link</button>
-      <button onclick="copyLink();">Copiar link</button>
+      <input id="num" type="text" name="phone-number"  placeholder="Ingresa tu numero">
+      <button onclick="generateLink()">Generar Link</button>
+      <button onclick="shareLink()">Compartir link</button>
+      <button onclick="copyLink()">Copiar link</button>
     </section>
 
     <footer>
