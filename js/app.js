@@ -3,14 +3,14 @@ let link = null;
 
 //FACEBOOK
 function setSocial(social){
-    if(social === "wa") base = "https://m.me/";
-    if(social === "me") base = "https://wa.me/";
+    if(social === "me") base = "https://m.me/";
+    if(social === "wa") base = "https://wa.me/";
 }
 
 
 
 function generateLink(){
-  let num = document.getElementById("num");
+  let num = document.getElementById('num');
   let link = base + num;
   window.open(link);
 }
