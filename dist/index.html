@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipupi</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+        <p class="logo">Pipupi</p>
+        <!--button type="button" class="btn">Instalame</button-->
+    </div>
+  </header>
+
+  <div id="about">
+      <h2>¿Que es Pipupi?</h2>
+      <p>Conecta mas rapido con personas y negocios a traves de enlaces sociales, olvidate de registrar los numeros en tu agenda cada vez
+         que quieres contactar a una persona o negocio.</p>
+  </div>
+
+  <h2>Elige una red social</h2>
+  <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico a traves de la lada +52, si el numero al
+  que quieres contactar es de otro pais (ej. USA), entonces coloca primero la lada (+1 55 12345678)</p>
+    <div id="contenttwo">
+      <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')">
+      <img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')">
+    </div>
+
+    <section class="form">
+        <input id="num" type="text" name="phone-number"  placeholder="Ingresa tu numero">
+        <button onclick="generateLink()">Generar y Visitar Link</button>
+        <!--button onclick="shareLink()">Compartir link</--button-->  <!--TODO: USE WEB SHARE API-->
+        <!--button onclick="copyLink()">Copiar link</--button--> <!--TODO: USE CLIPBOARD API-->
+    </section>
+
+    <footer>
+      <p>Pipupi © 2023 </p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
