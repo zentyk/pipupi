@@ -1,20 +1,31 @@
 let base = null;
 let link = null;
 
-//FACEBOOK
 function setSocial(social){
+    //TODO: show visual choice
     if(social === "me") base = "https://m.me/";
     if(social === "wa") base = "https://wa.me/";
+    console.log(social);
 }
-
-
 
 function generateLink(){
-  let num = document.getElementById('num');
-  let link = base + num;
-  window.open(link);
+    if(base === null || base === undefined){
+        alert("Por favor, selecciona una red social");
+        return;
+    }
+    let data = document.getElementById('num').value;
+    let link = base + data;
+    window.open(link);
 }
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
 
 // function shareLink(){
 //     const numbers = document.getElementById('numbers')
