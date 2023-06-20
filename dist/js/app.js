@@ -27,22 +27,22 @@ if ("serviceWorker" in navigator) {
   })
 }
 
-// function shareLink(){
-//     const numbers = document.getElementById('numbers')
-//     numbers.addEventListener('click', event =>{
-//         if(navigator.share){
-//             navigator.share({
-//                 text: 'mandar a:',
-//                 url: 'https://www.google.com/'
-//         }).then(() =>{
-//             console.log('Gracias por compartir!');
-//         })
-//         .catch((err)=> console.error(err));
-//     } else {
-//         alert("UPS! ocurrio un error, vuelve a intentarlo.")
-//     }
-//     })
-// }
+ function shareLink(){
+     const shareBtn = document.getElementById('shareBtn')
+     shareBtn.addEventListener('click', event =>{
+         if(navigator.share){
+             navigator.share({
+                 text: 'mandar a:',
+                 url: console.log(link), 
+         }).then(() =>{
+             console.log('Gracias por compartir!');
+         })
+         .catch((err)=> console.error(err));
+     } else {
+         alert("UPS! ocurrio un error, vuelve a intentarlo.")
+     }
+     });
+ }
 
 // function copyLink(){
 //     let num = document.getElementById('num');
