@@ -1,11 +1,22 @@
 let base = null;
-let link = null;
+let link = undefined;
+
+baseFb = "https://m.me/";
+baseWa = "https://wa.me/";
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+    })
+}
 
 function setSocial(social){
     //TODO: show visual choice
-    if(social === "me") base = "https://m.me/";
-    if(social === "wa") base = "https://wa.me/";
-    console.log(social);
+    if(social === "me") base = baseFb;
+    if(social === "wa") base = baseWa;
 }
 
 function generateLink(){
@@ -14,35 +25,53 @@ function generateLink(){
         return;
     }
     let data = document.getElementById('num').value;
-    let link = base + data;
-    window.open(link);
+    link = base + data;
 }
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/serviceWorker.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err))
-  })
+function validField() {
+    console.log(link);
+    if(
+        link === null ||
+        link === false ||
+        link === undefined ||
+        link === "" ||
+        link === baseFb ||
+        link === baseWa) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
- function shareLink(){
-     const shareBtn = document.getElementById('shareBtn')
-     shareBtn.addEventListener('click', event =>{
-         if(navigator.share){
-             navigator.share({
-                 text: 'mandar a:',
-                 url: link,
-         }).then(() =>{
-             console.log('Gracias por compartir!');
-         })
-         .catch((err)=> console.error(err));
-     } else {
-         alert("UPS! ocurrio un error, vuelve a intentarlo.")
-     }
-     });
- }
+function openLink(){
+    console.log(link);
+    if(validField()) {
+        window.open(link);
+    } else {
+        alert("Por favor, genera un link valido primero");
+    }
+}
+
+const shareBtn = document.getElementById('shareBtn');
+shareBtn.addEventListener('click', event => {
+    try {
+        if('share' in navigator) {
+            console.log(link);
+            navigator.share({
+                title : 'Compartir',
+                text: 'Comparte tu link de WhatsApp',
+                url: link,
+            }).then(() => {
+                console.log('Gracias por compartir!');
+            })
+        }  else {
+            alert("UPS! ocurrio un error, vuelve a intentarlo.")
+        }
+    }
+    catch(err) {
+        console.log(err);
+    }
+});
 
 // function copyLink(){
 //     let num = document.getElementById('num');
