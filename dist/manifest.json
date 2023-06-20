@@ -1,7 +1,7 @@
 {
   "name": "Pipupi",
   "short_name": "Pipupi",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#41097A",
   "theme_color": "#050222",
