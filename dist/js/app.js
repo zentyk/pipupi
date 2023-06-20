@@ -33,7 +33,7 @@ if ("serviceWorker" in navigator) {
          if(navigator.share){
              navigator.share({
                  text: 'mandar a:',
-                 url: console.log(link), 
+                 url: link,
          }).then(() =>{
              console.log('Gracias por compartir!');
          })
