@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipupi</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/de3d16d7f9.js" crossorigin="anonymous"></script>
     <link rel="manifest" href="manifest.json">
+
 
 </head>
 <body>
@@ -26,16 +28,20 @@
   <h2>Elige una red social</h2>
   <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico a traves de la lada +52, si el numero al
   que quieres contactar es de otro pais (ej. USA), entonces coloca primero la lada (+1 55 12345678)</p>
+
     <div id="contenttwo">
       <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')">
       <img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')">
     </div>
 
+    <div id="toastBox"></div>
+
     <section class="form">
-        <input id="num" type="number"  placeholder="Ingresa tu numero">
+        <input id="num" type="number" placeholder="Ingresa tu numero"> 
+        <button onclick="generateLink(successMsg)">Generar link</button>
         <button onclick="openLink()">Visitar Link</button>
-        <button id="shareBtn">Compartir link</button>  <!--TODO: USE WEB SHARE API-->
-        <!--button onclick="copyLink()">Copiar link</--button--> <!--TODO: USE CLIPBOARD API-->
+    <!--button id="shareBtn">Compartir link</button-->  <!--TODO: USE WEB SHARE API-->
+        <button onclick="copyLink()">Copiar link</button> <!--TODO: USE CLIPBOARD API-->
     </section>
 
     <footer>

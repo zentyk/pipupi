@@ -1,5 +1,6 @@
 let base = null;
 let link = undefined;
+let successMsg = '<i class="fa-solid fa-circle-check"></i> ¡El link ha sido generado!'
 
 baseFb = "https://m.me/";
 baseWa = "https://wa.me/";
@@ -19,13 +20,22 @@ function setSocial(social){
     if(social === "wa") base = baseWa;
 }
 
-function generateLink(){
+function generateLink(msg){
     if(base === null || base === undefined){
         alert("Por favor, selecciona una red social");
         return;
     }
-    let data = document.getElementById('num').value;
-    link = base + data;
+    let toastBox = document.getElementById('toastBox');
+    let toast = document.createElement('div');
+    toast.classList.add("toast");
+    toast.innerHTML = msg;
+    toastBox.appendChild(toast);
+    setTimeout(()=>{
+        toast.remove();
+    },5000);
+//     let data = document.getElementById('num').value;
+//     link = base + data;
+//    alert("¡El link ha sido generado!");
 }
 
 function validField() {
@@ -73,9 +83,9 @@ shareBtn.addEventListener('click', event => {
     }
 });
 
-// function copyLink(){
-//     let num = document.getElementById('num');
-//     num.select();
-//     num.setSelectionRange(0,99999);
-//     document.execCommand('copy');
-// }
+function copyLink(){
+     let num = document.getElementById(link);
+     num.select();
+     num.setSelectionRange(0,99999);
+     document.execCommand('copy');
+}

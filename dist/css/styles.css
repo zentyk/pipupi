@@ -3,13 +3,13 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
 
 body{
-   background: linear-gradient(#41097A, #050222);
+   background: linear-gradient(#41097a, #030117);
    background-repeat: no-repeat;
    background-attachment: fixed;
-   font-family: Arial, Helvetica, sans-serif;
    display: flex;
    flex-direction: column;
    min-height: 100vh;
@@ -48,7 +48,6 @@ body{
         background: #41097A;
         color: white;
         border: none;
-        border-radius: 20px;
         padding: 10px;
         margin: 16px 0;
         font-size: 15px;
@@ -57,8 +56,8 @@ body{
 }
 
 .btn:hover{
-    background-color: #e3f1f8;
-    color: #32065E;
+    background-color: white;
+    color: #41097a;
     transform: scale(1.1);
 }
 /* 
@@ -118,7 +117,7 @@ body{
         display: flex;
         align-content: center;
         justify-content: center;
-        margin: 10px;
+        margin: 20px;
     }
 
     #contenttwo{
@@ -163,11 +162,11 @@ body{
 
     #num{
         width: 100%;
-        background: #EAEAEA;
+        background: white;
         padding: 10px;
         border-radius: 4px;
         margin-bottom: 16px;
-        border: 2px solid #32065E;
+        border: 2px solid #41097a;
         font-size: 18px;
     }
 
@@ -183,22 +182,79 @@ body{
 
     .form button{
         width: 100%;
-        background: #D9D9D9;
-        color: #32065E;
+        background: white;
+        color: #41097a;
         border: none;
-        padding: 10px;
-        margin: 16px 0;
+        padding: 15px;
+        margin: 20px 0;
         font-size: 16px;
         cursor: pointer;
+        border-radius: 10px;
+        margin-bottom: 15px;
     }
 
+    button:hover{
+        color: #32065E;
+        background: white;
+        box-shadow: 0 0 10px #5201A3, 0 0 40px #5201A3, 0 0 80px #5201A3;
+    }
+
+    #toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    }
+
+    .toast{
+        width: 400px;
+        height: 80px;
+        background: #fff;
+        font-weight: 500;
+        margin: 15px 0;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        position: relative;
+        transform: translateX(100%);
+        animation: moveleft 0.5s linear forwards;
+    }
+    @keyframes moveleft{
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    .toast i{
+        margin: 0 20px;
+        font-size: 35px;
+        color: #32065E;
+    }
+
+    .toast::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background: #32065E;
+        animation: anim 5s linear forwards;
+    }
+    @keyframes anim{
+        100%{
+            width: 0;
+        }
+    }
+    
     footer{
         display: flex;
         flex-direction: column;
         height: 50px;
-        text-transform: uppercase;
-        
-       
+        text-transform: uppercase; 
     }
 
     
