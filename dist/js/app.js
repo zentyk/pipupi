@@ -2,8 +2,8 @@ let base = null;
 let link = undefined;
 let successMsg = '<i class="fa-solid fa-circle-check"></i> ¡El link ha sido generado!'
 
-baseFb = "https://m.me/";
-baseWa = "https://wa.me/";
+let baseFb = "https://m.me/";
+let baseWa = "https://wa.me/";
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
@@ -33,9 +33,9 @@ function generateLink(msg){
     setTimeout(()=>{
         toast.remove();
     },5000);
-//     let data = document.getElementById('num').value;
-//     link = base + data;
-//    alert("¡El link ha sido generado!");
+    let data = document.getElementById('num').value;
+    link = base + data;
+//   alert("¡El link ha sido generado!");
 }
 
 function validField() {
@@ -54,7 +54,6 @@ function validField() {
 }
 
 function openLink(){
-    console.log(link);
     if(validField()) {
         window.open(link);
     } else {
@@ -62,7 +61,7 @@ function openLink(){
     }
 }
 
-const shareBtn = document.getElementById('shareBtn');
+/*const shareBtn = document.getElementById('shareBtn');
 shareBtn.addEventListener('click', event => {
     try {
         if('share' in navigator) {
@@ -81,11 +80,11 @@ shareBtn.addEventListener('click', event => {
     catch(err) {
         console.log(err);
     }
-});
+});*/
 
-function copyLink(){
+/*function copyLink(){
      let num = document.getElementById(link);
      num.select();
      num.setSelectionRange(0,99999);
      document.execCommand('copy');
-}
+}*/
