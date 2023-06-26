@@ -103,3 +103,5 @@ shareBtn.addEventListener('click', event => {
 //** 2. enter the number (enable the input field)
 //** 3. generate the link (enable the button)
 //** 4. visit the link (enable the button)
+
+//TODO: EXCLUSIVE FOR ZENTYK: AVOID 'e' or any other letter in the input field, just accept numbers
