@@ -88,3 +88,19 @@ shareBtn.addEventListener('click', event => {
      num.setSelectionRange(0,99999);
      document.execCommand('copy');
 }*/
+
+//TODO: center the title
+//TODO: add an advice: "THIS SITE DOES NOT STORE ANY DATA"
+//TODO: change social img elements to a button and set the background and event listener
+//TODO: limit the number of characters in the input field (8) (only accept numbers)
+
+//TODO: remove the arrows from the input field
+//TODO: modify the whatsapp icon to indicate that the link is for whatsapp can be made by adding a css class to the icon
+
+//TODO: step by step guide:
+//** 1. select the social network (whatsapp button enabled by default)
+//** 2. enter the number (enable the input field)
+//** 3. generate the link (enable the button)
+//** 4. visit the link (enable the button)
+
+//TODO: EXCLUSIVE FOR ZENTYK: AVOID 'e' or any other letter in the input field, just accept numbers
