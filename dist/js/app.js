@@ -89,7 +89,7 @@ shareBtn.addEventListener('click', event => {
      document.execCommand('copy');
 }*/
 
-//TODO: center the title
+//TODO: center the title 
 //TODO: add an advice: "THIS SITE DOES NOT STORE ANY DATA"
 //TODO: change social img elements to a button and set the background and event listener
 //TODO: limit the number of characters in the input field (8) (only accept numbers)

@@ -19,6 +19,10 @@
     </div>
   </header>
 
+  <div id="advice">
+    <p>Este sitio no almacena ningun dato.</p>
+  </div>
+
   <div id="about">
       <h2>¿Que es Pipupi?</h2>
       <p>Conecta mas rapido con personas y negocios a traves de enlaces sociales, olvidate de registrar los numeros en tu agenda cada vez
@@ -28,13 +32,14 @@
   <h2>Elige una red social</h2>
   <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico.</p>
     <div id="contenttwo">
-      <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')">
+      <!-- <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')"> -->
+      <button id="whats" class="btn">whatsapp </button>
       <!--img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')"-->
     </div>
     <div id="toastBox"></div>
 
     <section class="form">
-        <label for="num">Numero de whatsapp</label>
+        <label for="num">Escribe tu numero de whatsapp</label>
         <input id="num" type="number" placeholder="Ingresa tu numero">
         <button onclick="generateLink(successMsg)">Generar link</button>
         <button onclick="openLink()">Visitar Link</button>
