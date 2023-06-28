@@ -20,21 +20,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     height: 85px;
-    padding: 5px 10%;
+    padding: 20px 10%;
 }
-
-/* .menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-} */
 
 .logo{
     font-size: 24px;
@@ -42,7 +30,6 @@ body{
     font-weight: 800;
     text-transform: uppercase;
 }
-
 
 .btn{
         width: 15%;
@@ -61,50 +48,6 @@ body{
     color: #41097a;
     transform: scale(1.1);
 }
-/* 
-.menu .navbar ul li{
-    position: relative;
-    float: left;
-}
-
-.menu .navbar ul li a{
-    font-size: 18px;
-    padding: 20px;
-    color: white;
-}
-
-.menu .navbar ul li a:hover{
-    color: #15A4F9;
-}
-
-#menu{
-    display: none;
-} */
-
-
-/* @media(max-width:991px){
-    .menu{
-        padding: 30px;
-    }
-   
-    .header{
-        padding: 40px 0;
-    }
-    .menu .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #050222;
-        display: none;
-    }
-    .menu .navbar ul li{
-        width: 100%;
-    }
-    #menu:checked ~ .navbar{
-        display: initial;
-    }    
-} */
 
     #about{
        display: flex;
@@ -127,37 +70,25 @@ body{
        justify-content: center;
        align-items: center;
     }
-    .img-1{
-        margin-right: 20px;
-        margin: 40px;    
-        cursor: pointer;
-    }
-
-    .img-1:hover{
-      transform: scale(1.1);
-      transition: 2s;
-    }
 
     #whats{
-        height: 80px;
-        width: 80px;
+        height: 70px;
+        width: 70px;
         background-color: transparent;
         background-size: contain;
-         border: 2px solid #41097a;
+        border: 2px solid #41097a;
         border-radius: 50%;
         cursor: pointer;
         background-image: url('../img/whatssapp.png');
     }
 
-
-    .img-2{
-        margin-left: 20px; 
-        cursor: pointer;      
-    }
-
-    .img-2:hover{
-      transform: scale(1.1);
-      transition: 2s;
+       #whats:hover{
+        box-shadow: 0 0 0px #38bf4b;
+        background-color:#38bf4b;
+        border: 1px solid #38bf4b;
+        width:70px;
+        height: 70px;
+        transition: 0.1s;
     }
 
     .form{
@@ -206,12 +137,11 @@ body{
         margin-bottom: 15px;
     }
 
-    button:hover{
-        color: #32065E;
-        background: white;
-        box-shadow: 0 0 10px #5201A3, 0 0 40px #5201A3, 0 0 80px #5201A3;
-    }
-
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
     #toastBox{
     position: absolute;
     bottom: 30px;
