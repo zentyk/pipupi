@@ -85,9 +85,6 @@ body{
     }
 
        #whats:hover{
-        box-shadow: 0 0 0px #38bf4b;
-        background-color:#38bf4b;
-        border: 1px solid #38bf4b;
         width:70px;
         height: 70px;
         transition: 0.1s;
