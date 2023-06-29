@@ -92,7 +92,6 @@ shareBtn.addEventListener('click', event => {
      document.execCommand('copy');
 }*/
 
-/
 //TODO: limit the number of characters in the input field (8) (only accept numbers)
 //TODO: step by step guide:
 //** 1. select the social network (whatsapp button enabled by default)
