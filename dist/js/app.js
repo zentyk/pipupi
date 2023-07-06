@@ -28,6 +28,10 @@ function generateLink(msg){
         alert("Por favor, selecciona una red social");
         return;
     }
+     let data = document.getElementById('num').value;
+     link = base + data;
+     document.getElementById('links').value = link;
+
      let toastBox = document.getElementById('toastBox');
      let toast = document.createElement('div');
      toast.classList.add("toast");
@@ -36,12 +40,6 @@ function generateLink(msg){
      setTimeout(()=>{
          toast.remove();
      },5000);
-
-     let data = document.getElementById('num').value;
-     link = base + data;
-     document.getElementById('links').innerHTML = link;
-
-//   alert("¡El link ha sido generado!");
 }
 
 function validField() {
