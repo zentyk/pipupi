@@ -115,8 +115,7 @@ body{
 
     #links{
         width: 100%;
-        background: #EAEAEA;
-        opacity: 10%;
+        background: #EAEAEA00;
         color: white;
         padding: 10px;
         border-radius: 4px;
