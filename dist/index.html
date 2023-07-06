@@ -37,15 +37,18 @@
       <button id="whats" onclick="setSocial('wa')"></button>
       <!--img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')"-->
     </div>
+
     <div id="toastBox"></div>
+   
 
     <section class="form">
         <label for="num">Escribe tu numero de whatsapp</label>
         <input id="num" type="number" placeholder="Ingresa tu numero">
         <button onclick="generateLink(successMsg)">Generar link</button>
-        <button onclick="openLink()">Visitar Link</button>
         <!--button id="shareBtn">Compartir link</button-->  <!--TODO: USE WEB SHARE API-->
-        <!--button onclick="copyLink()">Copiar link</-button--> <!--TODO: USE CLIPBOARD API-->
+        <input id="links" type="text">
+        <button onclick="copyLink()">Copiar link</button> <!--TODO: USE CLIPBOARD API-->
+        <button onclick="openLink()">Visitar Link</button>
     </section>
 
     <footer>

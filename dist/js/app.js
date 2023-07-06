@@ -25,16 +25,19 @@ function generateLink(msg){
         alert("Por favor, selecciona una red social");
         return;
     }
-    let toastBox = document.getElementById('toastBox');
-    let toast = document.createElement('div');
-    toast.classList.add("toast");
-    toast.innerHTML = msg;
-    toastBox.appendChild(toast);
-    setTimeout(()=>{
-        toast.remove();
-    },5000);
-    let data = document.getElementById('num').value;
-    link = base + data;
+     let toastBox = document.getElementById('toastBox');
+     let toast = document.createElement('div');
+     toast.classList.add("toast");
+     toast.innerHTML = msg;
+     toastBox.appendChild(toast);
+     setTimeout(()=>{
+         toast.remove();
+     },5000);
+
+     let data = document.getElementById('num').value;
+     link = base + data;
+     document.getElementById('links').innerHTML = link;
+
 //   alert("¡El link ha sido generado!");
 }
 
@@ -82,12 +85,9 @@ shareBtn.addEventListener('click', event => {
     }
 });*/
 
-/*function copyLink(){
-     let num = document.getElementById(link);
-     num.select();
-     num.setSelectionRange(0,99999);
-     document.execCommand('copy');
-}*/
+function copyLink(){
+ 
+}
 
 //TODO: center the title /
 //TODO: add an advice: "THIS SITE DOES NOT STORE ANY DATA" /
