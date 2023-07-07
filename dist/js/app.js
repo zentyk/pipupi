@@ -34,6 +34,7 @@ function generateLink(msg){
 
      let toastBox = document.getElementById('toastBox');
      let toast = document.createElement('div');
+
      toast.classList.add("toast");
      toast.innerHTML = msg;
      toastBox.appendChild(toast);
@@ -86,9 +87,19 @@ shareBtn.addEventListener('click', event => {
     }
 });*/
 
-function copyLink(){
- 
-}
+ document.querySelectorAll(".copy-link").forEach(copyLinkContainer => {
+    const inputField = copyLinkContainer.querySelector("#links");
+    const copyButton = copyLinkContainer.querySelector(".copybtn");
+
+    inputField.addEventListener("focus", () => inputField.select());
+
+    copyButton.addEventListener("click", () => {
+        const text = inputField.value;
+
+        inputField.select();
+        navigator.clipboard.writeText(text);
+    });
+ });
 
 //TODO: limit the number of characters in the input field (8) (only accept numbers)
 //TODO: step by step guide:

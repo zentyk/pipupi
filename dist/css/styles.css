@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
@@ -12,7 +12,7 @@ body{
    background-attachment: fixed;
    display: flex;
    flex-direction: column;
-   min-height: 100vh;
+   min-height: 150vh;
 }
 
 .header{
@@ -22,8 +22,6 @@ body{
     height: 85px;
     padding: 20px 10%;
 }
-
-
 
 .logo{
     font-size: 24px;
@@ -41,7 +39,6 @@ body{
         margin: 16px 0;
         font-size: 15px;
         cursor: pointer;
-
 }
 
 .btn:hover{
@@ -50,29 +47,29 @@ body{
     transform: scale(1.1);
 }
 
-    #about{
+#about{
        display: flex;
        flex-direction: column;
        justify-content: center;
        align-items: center;
-    }
+}
 
-    h2,p{
+h2,p{
         color: white;
         display: flex;
         align-content: center;
         justify-content: center;
         margin: 20px;
-    }
+}
 
-    #contenttwo{
+#contenttwo{
        display: flex;
        flex-direction: row;
        justify-content: center;
        align-items: center;
-    }
+}
 
-    #whats{
+#whats{
         height: 70px;
         width: 70px;
         background-color: transparent;
@@ -81,28 +78,28 @@ body{
         border-radius: 50%;
         cursor: pointer;
         background-image: url('../img/whatssapp.png');
-    }
+}
 
-       #whats:hover{
+#whats:hover{
         width:70px;
         height: 70px;
         transition: 0.1s;
-    }
+}
 
-    .form{
+.form{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 200px;
         margin: auto;
-        margin-top: 20px;
+        margin-top: 15px;
         border-radius: 4px;
         color: white;
         box-shadow: 7px 13px 37px #0000;
-    }
+}
 
-    #num{
+#num{
         width: 100%;
         background: white;
         padding: 12px;
@@ -111,17 +108,48 @@ body{
         margin-bottom: 16px;
         border: 2px solid #41097a;
         font-size: 18px;
-    }
+}
 
-    #links{
+.copy-link{
+        position: relative;
+        padding: 10px;
+        background: white;
+        border: 1px solid #41097a;
+        border-radius: 10px;
+        display: flex;    
+}
+
+.copy-link input#links{
+        padding: 10px;
+        font-size: 18px;
+        color: #41097a;       
+        border: none;
+        outline: none;       
+}
+
+.copy-link .copybtn{
+        padding: 10px;
+        background: #41097a;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        cursor: pointer;
+}
+
+    /* #links{
         width: 100%;
         background: #EAEAEA00;
+        border: 1px solid #41097a;
         color: white;
         padding: 10px;
         border-radius: 4px;
         margin-bottom: 10px;
         font-size: 18px;
-    }
+        border: none;
+        outline: none;
+    } */
 
     .form a{
         color: white;
@@ -145,6 +173,17 @@ body{
         border-radius: 10px;
         margin-bottom: 20px;
     }
+
+     /* #copylink{
+        width: 20%;
+        background: white;
+        color: #41097a;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+    } */
 
     input[type=number]::-webkit-inner-spin-button, 
     input[type=number]::-webkit-outer-spin-button { 

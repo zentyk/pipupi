@@ -46,11 +46,15 @@
         <input id="num" type="number" placeholder="Ingresa tu numero">
         <button onclick="generateLink(successMsg)">Generar link</button>
         <!--button id="shareBtn">Compartir link</button-->  <!--TODO: USE WEB SHARE API-->
-        <input type="text" id="links" placeholder="aqui aparecera" readonly>
-        <button onclick="copyLink()">Copiar link</button> <!--TODO: USE CLIPBOARD API-->
+
+    <div class="copy-link">
+     <input type="text" id="links" readonly>
+        <button class="copybtn">
+          <i class="fa fa-clone"></i>
+        </button>
+    </div>    
         <button onclick="openLink()">Visitar Link</button>
     </section>
-
     <footer>
       <p>Pipupi © 2023 </p>
     </footer>
