@@ -72,6 +72,7 @@ h2,p{
 #whats{
         height: 70px;
         width: 70px;
+        margin: 20px;
         background-color: transparent;
         background-size: contain;
         border: 2px solid #41097a;
@@ -93,19 +94,19 @@ h2,p{
         align-items: center;
         width: 200px;
         margin: auto;
-        margin-top: 15px;
+        margin-top: 25px;
         border-radius: 4px;
         color: white;
         box-shadow: 7px 13px 37px #0000;
 }
 
 #num{
-        width: 100%;
+        width: 130%;
         background: white;
-        padding: 12px;
+        padding: 13px;
         margin: 20px;
         border-radius: 10px;
-        margin-bottom: 16px;
+        margin-bottom: 3px;
         border: 2px solid #41097a;
         font-size: 18px;
 }
@@ -168,12 +169,12 @@ h2,p{
     }
 
     .form button{
-        width: 100%;
+        width: 130%;
         background: white;
         color: #41097a;
         border: none;
         padding: 15px;
-        margin: 20px 0;
+        margin: 50px 0;
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
