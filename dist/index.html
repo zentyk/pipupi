@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <header>
+ <header>
     <div class="header">
         <p class="logo">Pipupi</p>
         <!--button type="button" class="btn">Instalame</button-->
@@ -28,143 +28,114 @@
          que quieres contactar a una persona o negocio.</p>
   </div>
 
-  <div class="card-container glass-effect">
-    <div class="container">
-      <header>PIPUPI</header>
-      <div class="progress-bar">
-        <div class="step">
-          <p>Red social</p>
-          <div class="bullet">
-            <span>1</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
-        <div class="step">
-          <p>Ingresa tu numero</p>
-          <div class="bullet">
-            <span>2</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
-        <div class="step">
-          <p>Gnera tu link</p>
-          <div class="bullet">
-            <span>3</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
-        <div class="step">
-          <p>Visitar link</p>
-          <div class="bullet">
-            <span>4</span>
-          </div>
-
-        </div>
-      </div>
-
-      </div>
-
-
-
-
-
-
-      <div class="form-outer">
-        <form action="#">
-          <div class="page">
-            <div class="title">Elige una red social</div>
-              <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico.</p>
-               <button id="whats" onclick="setSocial('wa')"></button>
-            <div class="field btns">
-              <button class="next">Siguiente</button>
-            </div>    
-          </div> 
-
-             <div class="page">
-            <div class="title">Escribe tu numero de whatsapp</div>
-              <input id="num" type="number">
-            <div class="field btns">
-              <button class="next">Siguiente</button>
-            </div>              
-            </div>    
-
-            <div class="page">
-            <div class="title"> Genera tu link</div>
-            <button onclick="generateLink(successMsg)">Generar link</button>     
-              <input type="text" id="links" readonly>
-        <button class="copybtn">
-          <i class="fa fa-clone"></i>
-        </button>
-            <div class="field btns">
-              <button class="next">Siguiente</button>
-            </div>              
-            </div> 
-
-            <div class="page">
-            <div class="title">Visitar link</div>
-               <button onclick="openLink()">Visitar Link</button>
-            <div class="field btns">
-              <button class="prev-2 prev">Anterior</button>
-              <button class="next-2 prev">Siguiente</button>
-            </div>              
-            </div> 
-          </div>
-        </form>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="wrapper">
+	  <div class="header">
+		<ul>
+			<li class="active form_1_progessbar">
+				<div>
+					<p>1</p>
+				</div>
+			</li>
+			<li class="form_2_progessbar">
+				<div>
+					<p>2</p>
+				</div>
+			</li>
+			<li class="form_3_progessbar">
+				<div>
+					<p>3</p>
+				</div>
+			</li>
+      		<li class="form_4_progessbar">
+				<div>
+					<p>4</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="form_wrap">
+		<div class="form_1 data_info">
+			<h2>Elige una red social</h2>
+				 <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico.</p>
+         <button id="whats" onclick="setSocial('wa')"></button>
+		</div>
+		<div class="form_2 data_info" style="display: none;">
+			<h2>Personal Info</h2>
+				<div class="form_container">
+					<div class="input_wrap">
+						<label for="num">Escribe tu numero de whatsapp</label>
+						<input type="number" class="input" id="num">
+					</div>
+				</div>
+		</div>
+		<div class="form_3 data_info" style="display: none;">
+			<h2>Genera tu link</h2>
+				<div class="form_container">
+				<button id="generate" onclick="generateLink(successMsg)">Generar link</button>
+				 <div class="copy-link">
+					<input type="text" id="links" class="copy-link-input" readonly>
+						<button type="button" class="copybtn">
+						<span class="material-icons">content_copy</span>
+						</button>
+					</div>
+				</div>
+		</div>
+    <div class="form_4 data_info" style="display: none;">
+			<h2>Visita el link generado</h2>
+				<div class="form_container">
+					<div class="input_wrap">
+						  <button id="generate" onclick="openLink()">Visitar Link</button>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="btns_wrap">
+		<div class="common_btns form_1_btns">
+			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+		<div class="common_btns form_2_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
+			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+    	<div class="common_btns form_3_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
+			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+		<div class="common_btns form_4_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
+			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		
+		</div>    
+	</div>
+</div>
 
   <!-- <h2>Elige una red social</h2>
   <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico.</p> -->
-    <div id="contenttwo">
-      <!-- <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')"> -->
+
+
+    <!-- <div id="contenttwo"> -->
+        <!-- <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')"> 
       <button id="whats" onclick="setSocial('wa')"></button>
-      <!--img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')"-->
-    </div> 
+      <img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')">
+    </div>
+
     <div id="toastBox"></div>
-     
-    <!-- <section class="form"> -->
-    
+   
+
+    <section class="form">
         <label for="num">Escribe tu numero de whatsapp</label>
         <input id="num" type="number" placeholder="Ingresa tu numero">
         <button onclick="generateLink(successMsg)">Generar link</button>
-        <div class="copy-link">
+          <button id="shareBtn">Compartir link</button>  <!--TODO: USE WEB SHARE API-->
+        <!-- <div class="copy-link">
      <input type="text" id="links" readonly>
         <button class="copybtn">
           <i class="fa fa-clone"></i>
         </button>
     </div>
-      <button onclick="openLink()">Visitar Link</button>
-      </div>
-  </div>
-      
-    <!-- </section> -->
-
+        <button onclick="openLink()">Visitar Link</button>
+    </section>  -->
+    
     <footer>
       <p>Pipupi © 2023 </p>
     </footer>
