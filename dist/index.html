@@ -5,139 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipupi</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="css/styles.css">	
 </head>
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
- <header>
-    <div class="header">
-        <p class="logo">Pipupi</p>
-        <!--button type="button" class="btn">Instalame</button-->
-    </div>
-  </header>
+	<header>
+		<div class="header">
+			<p class="logo">Pipupi</p>
+		</div>
+		<div>
+			<p>Asegurate de estar en </p><strong>pipupi.app</strong></p>
+			<a href="http://pipupi.app">Por que estoy viendo esto?</a>
+		</div>
+	</header>
+	<section id="main">
 
-  <div id="advice">
-    <p>Este sitio no almacena ningun dato.</p>
-  </div>
-
-  <div id="about">
-      <h2>¿Que es Pipupi?</h2>
-      <p>Conecta mas rapido con personas y negocios a traves de enlaces sociales, olvidate de registrar los numeros en tu agenda cada vez
-         que quieres contactar a una persona o negocio.</p>
-  </div>
-
-    <div class="wrapper">
-	  <div class="header">
-		<ul>
-			<li class="active form_1_progessbar">
-				<div>
-					<p>1</p>
-				</div>
-			</li>
-			<li class="form_2_progessbar">
-				<div>
-					<p>2</p>
-				</div>
-			</li>
-			<li class="form_3_progessbar">
-				<div>
-					<p>3</p>
-				</div>
-			</li>
-      		<li class="form_4_progessbar">
-				<div>
-					<p>4</p>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<div class="form_wrap">
-		<div class="form_1 data_info">
-			<h2>Elige una red social</h2>
-				 <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico.</p>
-         <button id="whats" onclick="setSocial('wa')"></button>
-		</div>
-		<div class="form_2 data_info" style="display: none;">
-			<h2>Personal Info</h2>
-				<div class="form_container">
-					<div class="input_wrap">
-						<label for="num">Escribe tu numero de whatsapp</label>
-						<input type="number" class="input" id="num">
-					</div>
-				</div>
-		</div>
-		<div class="form_3 data_info" style="display: none;">
-			<h2>Genera tu link</h2>
-				<div class="form_container">
-				<button id="generate" onclick="generateLink(successMsg)">Generar link</button>
-				 <div class="copy-link">
-					<input type="text" id="links" class="copy-link-input" readonly>
-						<button type="button" class="copybtn">
-						<span class="material-icons">content_copy</span>
-						</button>
-					</div>
-				</div>
-		</div>
-    <div class="form_4 data_info" style="display: none;">
-			<h2>Visita el link generado</h2>
-				<div class="form_container">
-					<div class="input_wrap">
-						  <button id="generate" onclick="openLink()">Visitar Link</button>
-					</div>
-				</div>
-		</div>
-	</div>
-	<div class="btns_wrap">
-		<div class="common_btns form_1_btns">
-			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
-		</div>
-		<div class="common_btns form_2_btns" style="display: none;">
-			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
-			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
-		</div>
-    	<div class="common_btns form_3_btns" style="display: none;">
-			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
-			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
-		</div>
-		<div class="common_btns form_4_btns" style="display: none;">
-			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
-			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		<section id="hasLink">
+			<h2>Recibiste un link generado seguro!</h2>
+			<div class="link">
+				<a id="receivedLink">Visitar Link</a>
+			</div>
+		</section>
+		<section id="no-link">
+			<h2>Genera tu link de whatsapp o contacta a alguien en segundos!</h2>
+			<button class="social-btn" onclick="setSocial('wa')">
+				<img id="whaicon" src="./img/whatssapp.png" alt="Whatsapp Icon" height="50" width="50">
+			</button>	
 		
-		</div>    
-	</div>
-</div>
+		<label for="num">Escribe tu numero de whatsapp</label>
+		<input id="num" type="number" inputmode="numeric" maxlength="10" placeholder="Ingresa tu numero" pattern="[0-9]{10}" required onKeyDown="avoidLetters(event)">
 
-  <!-- <h2>Elige una red social</h2>
-  <p>Por el momento pipupi solo permite establecer contacto con usuarios de Whatsapp Mexico.</p> -->
+		<label for="msg">Crifrar link?</label>
+		<input type="checkbox" id="cypher" name="cypher" value="cypher">
+	
+		<button onclick="generateLink(successMsg)">Generar link</button>
+		
+		<button id="shareBtn">Compartir link</button>
+		<div class="copy-link">
+			<input type="text" id="links" readonly>
+			<button class="copybtn">
+				<i class="fa fa-clone"></i>
+			</button>
+		</div>
+		<button onclick="openLink()">Visitar Link</button>	
+		</section>	
+	</section>
 
-
-    <!-- <div id="contenttwo"> -->
-        <!-- <img class="img-1" src="img/whatsapp.png" alt="" onclick="setSocial('wa')"> 
-      <button id="whats" onclick="setSocial('wa')"></button>
-      <img class="img-2" src="img/facebook.png" alt="" onclick="setSocial('me')">
-    </div>
-
-    <div id="toastBox"></div>
-   
-
-    <section class="form">
-        <label for="num">Escribe tu numero de whatsapp</label>
-        <input id="num" type="number" placeholder="Ingresa tu numero">
-        <button onclick="generateLink(successMsg)">Generar link</button>
-          <button id="shareBtn">Compartir link</button>  <!--TODO: USE WEB SHARE API-->
-        <!-- <div class="copy-link">
-     <input type="text" id="links" readonly>
-        <button class="copybtn">
-          <i class="fa fa-clone"></i>
-        </button>
-    </div>
-        <button onclick="openLink()">Visitar Link</button>
-    </section>  -->
-    
-    <footer>
+	<footer>
       <p>Pipupi © 2023 </p>
     </footer>
     <script src="js/app.js"></script>
