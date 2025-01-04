@@ -80,12 +80,21 @@ async function generateLink(){
     } else {
         link = link+"&noCypher=true";
     }
-    document.getElementById('links').value = window.location.host +"?unk="+link;
+    document.getElementById('links').value = link;
 }
 
 function openLink(){
     if(validField()) {
         window.open(window.atob(link));
+    } else {
+        alert("Por favor, genera un link valido primero");
+    }
+}
+
+function copyLink(){
+    if(validField()) {
+        navigator.clipboard.writeText(link.replace("&noCypher=true",""));
+        document.getElementById('links').innerHTML = successMsg;
     } else {
         alert("Por favor, genera un link valido primero");
     }

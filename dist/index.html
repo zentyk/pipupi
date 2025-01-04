@@ -10,18 +10,15 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-
 	<header>
-		<div class="header">
-			<p class="logo">Pipupi</p>
-		</div>
-		<div>
-			<p>Asegurate de estar en </p><strong>pipupi.app</strong></p>
-			<a href="http://pipupi.app">Por que estoy viendo esto?</a>
-		</div>
+		<h2 class="logo">Pipupi</h2>
 	</header>
-	<section id="main">
+	<section id="advice">	
+		<p>Asegurate de estar en </p><strong>pipupi.app</strong></p>
+		<!--a href="http://pipupi.app">Por que estoy viendo esto?</a-->
+	</section>
 
+	<section id="main">
 		<section id="hasLink">
 			<h2>Recibiste un link generado seguro!</h2>
 			<div class="link">
@@ -33,31 +30,40 @@
 			<button class="social-btn" onclick="setSocial('wa')">
 				<img id="whaicon" src="./img/whatssapp.png" alt="Whatsapp Icon" height="50" width="50">
 			</button>	
-		
-		<label for="num">Escribe tu numero de whatsapp</label>
-		<input id="num" type="number" inputmode="numeric" maxlength="10" placeholder="Ingresa tu numero" pattern="[0-9]{10}" required onKeyDown="avoidLetters(event)">
+			
+			<label for="num">Escribe tu numero de whatsapp</label>
+			<input id="num" type="number" inputmode="numeric" maxlength="10" placeholder="Ingresa tu numero" pattern="[0-9]{10}" required onKeyDown="avoidLetters(event)">
 
-		<label for="msg">Crifrar link?</label>
-		<input type="checkbox" id="cypher" name="cypher" value="cypher">
+			<!--label for="msg">Cifrar link?</label>
+			<input type="checkbox" id="cypher" name="cypher" value="cypher"-->
 	
-		<button onclick="generateLink(successMsg)">Generar link</button>
+			<button class="pipupiBtn" onclick="generateLink(successMsg)">Generar link</button>
 		
-		<button id="shareBtn">Compartir link</button>
-		<div class="copy-link">
-			<input type="text" id="links" readonly>
-			<button class="copybtn">
-				<i class="fa fa-clone"></i>
-			</button>
-		</div>
-		<button onclick="openLink()">Visitar Link</button>	
+			<button class="pipupiBtn" id="shareBtn">Compartir link</button>
+			<div class="copy-link">
+				<input type="text" id="links" readonly>
+				<button class="pipupiBtn" id="copyBtn" onclick="copyLink()">
+					Copiar
+				</button>
+			</div>
+			<button class="pipupiBtn" onclick="openLink()">Visitar Link</button>	
 		</section>	
 	</section>
-
+	<br>
 	<footer>
       <p>Pipupi © 2023 </p>
     </footer>
     <script src="js/app.js"></script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8052537613003818"
-     crossorigin="anonymous"></script> 
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SSXCWTFFKL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SSXCWTFFKL');
+</script>
 </body>
 </html>
